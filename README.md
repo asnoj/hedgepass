@@ -6,10 +6,10 @@ Memory-hygienic by design, built to be small enough to read in one sitting.
 </p>
 
 ```text
-  .::::::::..                                                                                                                      ..::::::::.
- :::::::::::::                                                                                                                    :::::::::::::
-:::::::::::' .\                                                                                                                  /. `:::::::::::
-`::::::::::_,__o                                                                                                                o__,_::::::::::'
+  .::::::::..                                                                                            ..::::::::.
+ :::::::::::::                                                                                          :::::::::::::
+:::::::::::' .\                                                                                       /. `:::::::::::
+`::::::::::_,__o                                                                                     o__,_::::::::::'
 ```
 
 > **Status:** v1, a learning and portfolio project. It has not been independently audited. Read [`THREAT_MODEL.md`](THREAT_MODEL.md) before trusting it with anything that matters.
