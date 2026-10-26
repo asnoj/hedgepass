@@ -85,7 +85,7 @@ At every point, either the old vault or the new vault exists in full on disk, ne
 
 ## 5. Additional limitations to be aware of
 
-- **`mlock` limits.** Locking memory is subject to the per-process limit (`ulimit -l`, `RLIMIT_MEMLOCK`). Whether and how a failure to lock is reported should be verified against the libsodium documentation for the version in use.
+- **`mlock` limits.** Locking memory is subject to the per-process OS limit (ulimit -l, RLIMIT_MEMLOCK). If this limit is exceeded, sodium_malloc fails closed by returning NULL, causing SecureBuffer to throw an exception rather than silently operating in un-locked RAM.
 - **Hibernation.** Suspend-to-disk writes all of RAM to storage, including locked pages. Full-disk encryption of the swap or hibernation partition is the appropriate mitigation, and it lies outside `hedgepass`.
 - **Core dumps.** If the process crashes, a core dump could contain secrets unless dumps are disabled or restricted on the system.
 - **Not audited.** The design follows established practice, but it has not been reviewed by an independent third party.
