@@ -1,0 +1,11 @@
+build/
+build-rel/
+*.vault
+*.key
+.env
+hedgepass
+hedgepass_test
+hedgepass_fuzz
+crash-*
+leak-*
+timeout-*
